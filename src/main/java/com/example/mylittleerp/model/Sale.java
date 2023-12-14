@@ -3,7 +3,7 @@ package com.example.mylittleerp.model;
 import java.util.Date;
 import java.util.List;
 
-class Sale {
+public class Sale {
     List<Product> products;
     int quantity;
     Date date;

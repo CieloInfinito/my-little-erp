@@ -1,6 +1,6 @@
 package com.example.mylittleerp.model;
 
-class Product {
+public class Product {
     String name;
     String description;
     double price;

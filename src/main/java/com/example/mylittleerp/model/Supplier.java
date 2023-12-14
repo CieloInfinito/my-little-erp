@@ -3,7 +3,7 @@ package com.example.mylittleerp.model;
 import java.util.ArrayList;
 import java.util.List;
 
-class Supplier {
+public class Supplier {
     String name;
     String address;
     String contact;
