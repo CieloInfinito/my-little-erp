@@ -13,9 +13,26 @@ public class Product {
         this.stockQuantity = stockQuantity;
     }
 
+    public Product() {
+    }
+    public Product(String[] values) {
+        if (values.length == 4) {
+            this.name = values[0];
+            this.description = values[1];
+            this.price = Double.parseDouble(values[2]);
+            this.stockQuantity = Integer.parseInt(values[3]);
+        } else {
+            // Handle the case where the array does not have enough elements
+            throw new IllegalArgumentException("String array for Product constructor must have 4 elements");
+        }
+    }
+
     @Override
     public String toString() {
         return getName();
+    }
+    public String toStringWithAttributes() {
+        return name + " " + description + " " + price + " " + stockQuantity;
     }
 
     public String getName() {

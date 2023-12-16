@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS suppliers (
     name VARCHAR(255) NOT NULL,
     address TEXT,
     contact VARCHAR(20)
+
 );
 
 -- Create the table for sales

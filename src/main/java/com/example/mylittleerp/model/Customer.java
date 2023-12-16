@@ -16,6 +16,29 @@ public class Customer {
         this.purchaseHistory = new ArrayList<>();
     }
 
+    // Constructor that receives a String array
+    public Customer(String[] values) {
+        if (values.length == 3) {
+            this.name = values[0];
+            this.address = values[1];
+            this.contact = values[2];
+            this.purchaseHistory = new ArrayList<>();
+        } else {
+            // Handle the case where the array does not have enough elements
+            throw new IllegalArgumentException("String array for Customer constructor must have 3 elements");
+        }
+    }
+    public Customer() {
+    }
+
+    @Override
+    public String toString() {
+        return name + '\'' +
+                ", " + address +
+                ", " + contact +
+                ", " + purchaseHistory;
+    }
+
     public String getName() {
         return name;
     }
